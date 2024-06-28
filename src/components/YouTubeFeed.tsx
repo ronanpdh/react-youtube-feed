@@ -1,13 +1,43 @@
 import React, { useState, useEffect } from 'react';
-import { YouTubeData, YoutubeFeedProps } from '../types/types';
+import { YouTubeData, YoutubeFeedProps, Color } from '../types/types';
 import '../output.css';
 
-export default function YouTubeFeed({ channelId, apiKey }: YoutubeFeedProps) {
+export default function YouTubeFeed({ channelId, apiKey, maxResults = 20, color = 'neutral' }: YoutubeFeedProps) {
 
     const [data, setData] = useState<YouTubeData>();
 
+    const colorClasses: Record<Color, string> = {
+        slate: 'text-slate-500',
+        gray: 'text-gray-500',
+        zinc: 'text-zinc-500',
+        neutral: 'text-neutral-500',
+        stone: 'text-stone-500',
+        red: 'text-red-500',
+        orange: 'text-orange-500',
+        amber: 'text-amber-500',
+        yellow: 'text-yellow-500',
+        lime: 'text-lime-500',
+        green: 'text-green-500',
+        emerald: 'text-emerald-500',
+        teal: 'text-teal-500',
+        cyan: 'text-cyan-500',
+        sky: 'text-sky-500',
+        blue: 'text-blue-500',
+        indigo: 'text-indigo-500',
+        violet: 'text-violet-500',
+        purple: 'text-purple-500',
+        fuchsia: 'text-fuchsia-500',
+        pink: 'text-pink-500',
+        rose: 'text-rose-500',
+        white: 'text-white',
+        black: 'text-black',
+    };
 
-    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`;
+
+    const className = `pointer-events-none mt-2 block truncate text-sm font-medium ${colorClasses[color] || colorClasses.neutral}`;
+
+
+    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
 
     const getChannel = async () => {
         try {
@@ -38,7 +68,7 @@ export default function YouTubeFeed({ channelId, apiKey }: YoutubeFeedProps) {
                                         </button>
                                     </div>
                                 </a>
-                                <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-white">{data.snippet.title}</p>
+                                <p className={className} >{data.snippet.title}</p>
                             </li>
                         ))}
                     </ul>

@@ -1,4 +1,29 @@
 // YouTube channel video response types
+export type Color = 
+  | 'slate'
+  | 'gray'
+  | 'zinc'
+  | 'neutral'
+  | 'stone'
+  | 'red'
+  | 'orange'
+  | 'amber'
+  | 'yellow'
+  | 'lime'
+  | 'green'
+  | 'emerald'
+  | 'teal'
+  | 'cyan'
+  | 'sky'
+  | 'blue'
+  | 'indigo'
+  | 'violet'
+  | 'purple'
+  | 'fuchsia'
+  | 'pink'
+  | 'white'
+  | 'black'
+  | 'rose';
 
 export interface PageInfo {
     totalResults: number;
@@ -55,4 +80,6 @@ export interface YouTubeData{
 export interface YoutubeFeedProps {
     channelId: string;
     apiKey: string;
+    maxResults?: number | null; 
+    color?: Color;
 }
