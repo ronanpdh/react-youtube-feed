@@ -12,19 +12,19 @@ Requires Tailwindcss and YouTube API key and channel Id. See google developer do
 ` npm i react-youtube-feed `
 
 ## Usage 
-```
-
+```js
+import { YouTubeFeed } from 'react-youtube-feed';
 
 // Replace id with the channel id you want to use as well as your api key.
 // Required props - channelId & apiKey
 
-<>
-  <YouTubeFeed channelId={id} apiKey={apiKey}/>      
-<>
+
+<YouTubeFeed channelId={id} apiKey={apiKey}/>      
+
 
 // Example with optional props
 
-  <YouTubeFeed channelId={id} apiKey={apiKey} color={'cyan'} maxResults={30} />
+<YouTubeFeed channelId={id} apiKey={apiKey} color={'cyan'} maxResults={30} />
 
 ```
 </br>
