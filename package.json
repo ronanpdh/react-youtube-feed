@@ -11,7 +11,12 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "keywords": [],
+  "keywords": [
+    "react", 
+    "youtube", 
+    "tailwindcss",
+    "async"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
