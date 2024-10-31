@@ -12,7 +12,7 @@ const Template: StoryFn<typeof YouTubeFeed> = (args) => <YouTubeFeed {...args} /
 export const FeedTest = Template.bind({});
 FeedTest.args = {
     channelId: "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    apiKey: "AIzaSyDrXXc1JEsNoN2YeC111aEtIWiqtqHh1Ps",
+    apiKey: "AIzaSyDnW_o96HcL1F_p_M0D3aJfWiI1G9apCn8",
     color: 'blue',
     maxResults: 2,
 }
