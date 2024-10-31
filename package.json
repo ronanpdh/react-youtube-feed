@@ -12,8 +12,8 @@
     "build-storybook": "storybook build"
   },
   "keywords": [
-    "react", 
-    "youtube", 
+    "react",
+    "youtube",
     "tailwindcss",
     "async"
   ],
@@ -43,7 +43,7 @@
     "storybook": "^8.1.11",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.2",
-    "vite": "5.3.2"
+    "vite": "^5.4.10"
   },
   "dependencies": {
     "tslib": "^2.6.3"
